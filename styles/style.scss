@@ -1,0 +1,143 @@
+@import "declarations.scss";
+@import "nullstyle.scss";
+
+$font-family: Helvetica Neue,helvetica,arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic,sans-serif;
+$text-ligth: rgb(236, 231, 231);
+
+%primary-text {
+    font-family: $font-family;
+    font-size: 14px;
+    color: rgb(43, 41, 41);
+}
+
+%text-field {
+    @extend .round-div;        
+    padding: 16px;
+    @extend %primary-text;
+    
+    text-overflow: ellipsis;
+}
+
+.round-div {
+    border-radius: 5px;
+    border: 1px hidden #000;
+}
+
+.copy-button {
+    @extend .round-div;
+    opacity: 0.8;
+    padding: 10px;
+    background-color: rgb(192, 188, 252);
+    border: 1 groove rgb(127, 119, 243);
+    @extend %primary-text;
+    transition-property: background-color, border;
+    transition-duration: 0.5s;
+
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &_g {
+        @extend .copy-button;        
+        background-color: rgb(115, 221, 171);
+        border: 1 groove rgb(119, 243, 119);
+        opacity: 1;
+    }
+}
+
+.app {
+    background: rgb(9,63,97);
+    font-family: $font-family;
+    background: linear-gradient(0deg, rgba(9,63,97,1) 0%, rgba(69,69,209,1) 31%, rgba(0,212,255,1) 100%);
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.section {
+    margin: 20px;
+    padding: 20px 20px 30px 20px;
+    width: 30%;
+    height: 70%;
+    min-height: 237px;
+    background-color: rgba(0, 0, 0, 0.623);
+    @extend .round-div;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        color: $text-ligth;
+        margin-bottom: 12px;
+    }
+}
+
+.form-wrapper {
+    
+}
+
+.form {
+    @extend .section__body;
+    &__imput {
+        margin: 10px 0;
+        flex: 1 1 auto;      
+        @extend %text-field;  
+    }
+}
+
+.result-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__body {
+
+    }
+}
+
+.result-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @extend %primary-text;
+    flex: 1 1 auto;
+    
+
+    &__text {
+        background-color: #fff;
+               
+        @extend %text-field;
+        flex: 1 1 auto;
+        max-height: 100px;
+        overflow-wrap: break-word;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &__title {
+        color: $text-ligth;
+        margin: 10px 0;
+    }
+
+    &__button {
+        margin-top: 10px; 
+        border-radius: 5px 5px;
+    }
+}

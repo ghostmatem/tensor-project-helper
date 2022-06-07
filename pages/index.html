@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../scripts/script.js" defer></script>
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Git project helper</title>
+</head>
+<body class="app">
+    <div class="wrapper">
+        <section class="form-wrapper section">
+            <div class="section__title">Данные</div>
+            <div class="section__body">
+                <form action="" class="form" name="main">                
+                    <input type="text" name="project" class="form__imput" placeholder="Название проекта">
+                    <input type="text" name="message" class="form__imput" placeholder="Сообщение коммита">
+                    <input type="text" name="login" class="form__imput" placeholder="Git - логин" >
+                    <input type="text" name="name" class="form__imput" placeholder="Инициалы" >
+                </form>
+            </div>
+        </section>
+        <section class="result-wrapper section">
+            <div class="section__title result-wrapper__title">Результат</div>
+            <div class="section__body result-wrapper__body">
+                <div class="result-card round-div">
+                    <div class="result-card__title">Clone:</div>
+                    <div class="result-card__text result-clone">Команда будет собрана, когда все поля будут заполнены</div>                  
+                    <button class="result-card__button copy-button">Скопировать</button>
+                </div>
+                <div class="result-card round-div">
+                    <div class="result-card__title">Push:</div>
+                    <div class="result-card__text result-push">Команда будет собрана, когда все поля будут заполнены</div>                 
+                    <button class="result-card__button copy-button">Скопировать</button>
+                </div>
+            </div>            
+        </section>
+    </div>
+</body>
+</html>
